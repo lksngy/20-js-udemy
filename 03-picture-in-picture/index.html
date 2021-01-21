@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-picture-in-picture</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap');
+    
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:rgb(27, 27, 27);
+    }
+
+    .button {
+        font-family: 'Barlow', sans-serif;
+        border: 2px solid black;
+        font-size: 2em;
+        border-radius: 7px;
+        padding: 10px;
+        box-shadow: inset 0 20px 5px -15px rgba(51, 51, 51, 0.5);
+
+    }
+
+    .button:hover {
+        box-shadow: inset 0 20px 5px -15px rgba(87, 25, 25, 0.5);
+    }
+    
+    .button:active {
+        transform: translateY(2px);
+    }
+    </style> 
+</head>
+<body>
+    <!-- video -->
+    <video id="video" controls height="360" width="640"></video>
+    <div class="button-container">
+        <button class="button">START</button>
+    </div>
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>
