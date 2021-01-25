@@ -2,10 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <title>05-light-dark-mode</title>
     <style>
 
-
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Source+Sans+Pro&display=swap');
 
 :root {
   --primary-color: rgb(255, 92, 92);
@@ -35,9 +36,10 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: var(--background);
   color: var(--on-background);
-  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%239C92AC' fill-opacity='0.25' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 section {
@@ -51,15 +53,18 @@ section {
 h1 {
   font-size: 100px;
   margin-bottom: 0;
+  font-family: 'Courgette', cursive;
 }
 
 h2 {
   font-size: 32px;
   font-weight: normal;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Navigation */
 nav {
+    font-family: 'Source Sans Pro', sans-serif;
   z-index: 10;
   position: fixed;
   font-size: 24px;
@@ -264,6 +269,19 @@ input:checked + .slider::before {
     </style>
 </head>
 <body>
+    <!-- light-dark-mode section -->
+    <div class="theme-switch-wrapper">
+        <span id="toggle-icon">
+            <span id="toggle-text">Light Mode</span>
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <!-- navigation -->
     <nav id="nav">
         <a href="#home">HOME</a>
         <a href="#about">ABOUT</a>
@@ -271,20 +289,56 @@ input:checked + .slider::before {
         <a href="#contact">CONTACT</a>
     </nav>
     
+    <!-- home section -->
     <section id="home">
         <div class="title-group">
             <h1>Custom title here</h1>
             <h2>Welcome to the website</h2>
         </div>
     </section>
+    <!-- about section -->
     <section id="about">
         <h1>H1 to be modified</h1>
+        <div class="about-container">
+            <div class="image-container">
+                <h2>Web innovation</h2>
+                <img src="img/undraw_conceptual_idea_light.svg" alt="" id="img1">
+            </div>
+            <div class="image-container">
+                <h2>Web development</h2>
+                <img src="img/undraw_feeling_proud_light.svg" alt="" id="img3">
+            </div>
+            <div class="image-container">
+                <h2>Mobile Apps</h2>
+                <img src="img/undraw_proud_coder_light.svg" alt="" id="img3">
+            </div>
+        </div>
     </section>
+    <!-- buttons section -->
     <section id="projects">
         <h1>Buttons</h1>
+        <div class="buttons">
+            
+            <button class="primary">Primary</button>
+            <button class="secondary">Secondary</buttonv>
+            <button class="primary" disabled>Disabled</button>
+            <button class="secondary outline">Alt Outline</button>
+            <button class="outline disabled" disabled>Disabled</button>
+
+        </div>
+        <div class="text-box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, voluptas impedit fuga delectus quo numquam dolorum. Deserunt vitae cumque quos deleniti, iure sit voluptatem. Magni facilis adipisci pariatur iusto excepturi.</p>
+        </div>
     </section>
+    <!-- contacts section -->
     <section id="contact">
-        <h1>contacts</h1>
+        <h1>Contacts</h1>
+        <div id="social-icons">
+            <i class="fab fa-github"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
     </section>
     <script src="script.js"></script>
 </body>
