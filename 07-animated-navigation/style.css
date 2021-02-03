@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --primaryColor: #fff;
@@ -16,15 +17,75 @@ html {
 body {
   margin: 0;
   background: #000;
+  font-family: 'Poppins', sans-serif;
 
+}
+
+.hide-menu {
+  display: none;
 }
 
 /* --- Navigation Menu ------------------------------ */
 
+/* Overlay */
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--navColor2);
+}
 
+/* Navigation menu */
+nav, nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: animateIn;
+  animation-duration: 400ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+
+nav li:nth-of-type(1) {
+  background-color: var(--navColor1);
+  height: 20vh;
+}
+
+nav li:nth-of-type(2) {
+  background-color: var(--navColor2);
+  height: 20vh;
+}
+
+nav li:nth-of-type(3) {
+  background-color: var(--navColor3);
+  height: 20vh;
+}
+
+nav li:nth-of-type(4) {
+  background-color: var(--navColor4);
+  height: 20vh;
+}
+
+nav li:nth-of-type(5) {
+  background-color: var(--navColor5);
+  height: 20vh;
+}
 /* --- Menu Bars ------------------------------------ */
-
 .menu-bars {
   position: fixed;
   top: 1rem;
@@ -42,6 +103,11 @@ body {
   background-color: #fff;
   margin: 8px 0;
   transition: 0.4s;
+}
+
+/* nav */
+nav {
+  color: var(--primaryColor);
 }
 
 /* Rotate first bar */
@@ -74,7 +140,7 @@ section {
 }
 
 section#home {
-  background-image: url("https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80");
+  background-image: url("https://images.unsplash.com/photo-1559787544-32ed9084f856?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
   background-size: cover;
   background-position: center center;
 }
@@ -105,6 +171,16 @@ section#projects {
 
 section#contact {
   background-color: var(--navColor5);
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Media Query: Large Smartphone (Vertical) */
