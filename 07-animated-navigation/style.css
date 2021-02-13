@@ -55,10 +55,16 @@ li {
   animation-timing-function: ease-in-out;
 }
 
-nav a {
+nav li a {
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   font-size: 1.5rem;
   color: var(--primaryColor);
+}
+
+nav li a:hover {
+  transform: scale(1.2);
 }
 
 nav li:nth-of-type(1) {
@@ -151,7 +157,7 @@ section#home a {
   top: 1.5rem;
   left: 1.5rem;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding-bottom: 5px;
   color: var(--primaryColor);
   border-bottom: 1px solid var(--primaryColor);

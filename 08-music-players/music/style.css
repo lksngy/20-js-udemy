@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(201, 206, 211);
+}
+
+.player {
+    width: 400px;
+    min-height: 500px;
+    background-color: gray;
+    border-radius: 20px;
+    box-shadow: 0 15px 15px 15px rgba(0,0,0,0.15);
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(231, 231, 231);
+}
+
+.picture {
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-picture {
+    position: relative;
+    top: -40px;
+    background-color: red;
+    width: 290px;
+    height: 290px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 10px rgba(0,0,0,0.2);
+
+}
+
+.song {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.song-name {
+    padding-top: 15px;
+    font-size: 1.8em;
+    /* font-style: bold; */
+}
+
+.author-name {
+    font-size: 1.2em;
+}
+
+.timeline {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(129, 129, 129);
+}
