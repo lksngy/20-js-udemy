@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
     <title>08-music-player</title>
 </head>
@@ -13,19 +14,28 @@
     </div>
     <div class="song">
         <div class="song-name">Seven Night Army (Remix)</div>
-        <div class="author-name">Lukas Nagy Design</div>
+        <div class="author-name">lksngy studio</div>
     </div>
     <div class="timeline">
         <div class="start-time">0:00</div>
-        <div class="line">[timeline here]</div>
         <div class="end-time">3:55</div>
     </div>
+    <div class="line-container">
+        <div class="line"></div>
+    </div>
     <div class="buttons">
-        <div class="back">(Back) </div>
-        <div class="play"> (Play) </div>
-        <div class="forward">(Forward)</div>
+        <div class="button back">
+            <i class="fas fa-backward"></i>
+        </div>
+        <div class="button play bigger">
+            <i class="fas fa-play" id="btnPlay"></i>
+            <i class="fas fa-pause hidden" id="btnPause"></i>
+        </div>
+        <div class="button forward">
+            <i class="fas fa-forward"></i>
+        </div>
     </div>
 </div>
-<script url="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
 body {
     display: flex;
     align-items: center;
@@ -7,13 +6,16 @@ body {
     background-color: rgb(201, 206, 211);
 }
 
+.hidden {
+    display: none;
+}
 .player {
     width: 400px;
     min-height: 500px;
     background-color: gray;
     border-radius: 20px;
     box-shadow: 0 15px 15px 15px rgba(0,0,0,0.15);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cabin', sans-serif;
     background-color: rgb(231, 231, 231);
 }
 
@@ -45,25 +47,65 @@ body {
 
 .song-name {
     padding-top: 15px;
-    font-size: 1.8em;
-    /* font-style: bold; */
+    font-size: 2em;
+    font-weight: 700;
 }
 
 .author-name {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .timeline {
-    height: 50px;
+    height: 40px;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 4px;
 
 }
 
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.line {
+    width: 90%;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.line:hover {
+    cursor: pointer;
+}
+
 .buttons {
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(129, 129, 129);
+    font-size: 1.8em;
+}
+
+.button:hover {
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(1.1);
+}
+
+.play {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bigger {
+    font-size: 1.2em;
 }
